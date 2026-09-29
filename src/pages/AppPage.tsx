@@ -163,6 +163,7 @@ export default function AppPage() {
       <AppHeader />
       <main className="app-main">
         <div className="task-page">
+          <h1 className="task-page-title">My Tasks</h1>
           <div className="task-add-bar">
             <input
               type="text"

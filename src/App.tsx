@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from './context/AuthContext'
 import LandingPage from './pages/LandingPage'
@@ -5,6 +6,8 @@ import SignInPage from './pages/SignInPage'
 import SignUpPage from './pages/SignUpPage'
 import AppPage from './pages/AppPage'
 import SettingsPage from './pages/SettingsPage'
+
+const InsightsPage = lazy(() => import('./pages/InsightsPage'))
 
 function LoadingScreen() {
   return (
@@ -49,6 +52,13 @@ export default function App() {
       <Route path="/app" element={
         <ProtectedRoute>
           <AppPage />
+        </ProtectedRoute>
+      } />
+      <Route path="/insights" element={
+        <ProtectedRoute>
+          <Suspense fallback={<LoadingScreen />}>
+            <InsightsPage />
+          </Suspense>
         </ProtectedRoute>
       } />
       <Route path="/settings" element={

@@ -1,27 +1,34 @@
 import { Link } from 'react-router-dom'
+import logoMark from '../assets/brand/logo-mark.svg'
+import logoFull from '../assets/brand/logo.svg'
 
 export default function LandingPage() {
   return (
     <div className="landing-page">
       <nav className="landing-nav">
         <div className="app-header-brand">
-          <div className="brand-logo">M</div>
-          MiraiTasks
+          <img src={logoMark} alt="MiraiTasks" className="brand-mark" />
+          <span className="brand-wordmark">
+            <span>Mirai</span><span className="gold-text">Tasks</span>
+          </span>
         </div>
-        <div style={{ display: 'flex', gap: '0.5rem' }}>
+        <div style={{ display: 'flex', gap: 'var(--space-2)' }}>
           <Link to="/signin" className="btn btn-ghost">Sign In</Link>
           <Link to="/signup" className="btn btn-primary">Sign Up</Link>
         </div>
       </nav>
 
       <section className="landing-hero">
-        <h1>Plan your future,<br /><span>one task at a time</span></h1>
-        <p>MiraiTasks is a clean, focused to-do list that helps you stay organized with priorities, notes, and due dates — all in one simple place.</p>
+        <div className="landing-hero-logo">
+          <img src={logoFull} alt="MiraiTasks" style={{ height: '48px' }} />
+        </div>
+        <h1>Plan your future,<br /><span className="gold-text">one task at a time</span></h1>
+        <p>MiraiTasks is a refined to-do list that helps you stay organized with priorities, notes, due dates, and progress insights — all in one elegant place.</p>
         <div className="landing-cta-group">
-          <Link to="/signup" className="btn btn-primary" style={{ padding: '0.75rem 2rem', fontSize: '1rem' }}>
+          <Link to="/signup" className="btn btn-primary">
             Get Started Free
           </Link>
-          <Link to="/signin" className="btn btn-secondary" style={{ padding: '0.75rem 2rem', fontSize: '1rem' }}>
+          <Link to="/signin" className="btn btn-secondary">
             I Already Have an Account
           </Link>
         </div>
@@ -59,6 +66,16 @@ export default function LandingPage() {
           </div>
           <h3>Due Dates & Priorities</h3>
           <p>Set due dates and priority levels to focus on what matters most. Overdue tasks are highlighted so nothing slips through.</p>
+        </div>
+        <div className="feature-card">
+          <div className="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 3v18h18" />
+              <path d="M7 14l4-4 4 4 5-5" />
+            </svg>
+          </div>
+          <h3>Progress Insights</h3>
+          <p>Track your productivity with completion trends, priority breakdowns, and streak tracking. See your progress at a glance.</p>
         </div>
       </section>
 

@@ -99,7 +99,7 @@ export default function SettingsPage() {
     <div className="app-shell">
       <AppHeader />
       <main className="app-main app-main-wide">
-        <h1 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '1.5rem' }}>Settings</h1>
+        <h1 className="settings-page-title">Settings</h1>
 
         {/* Profile */}
         <div className="card" style={{ marginBottom: '1.25rem' }}>
@@ -129,7 +129,7 @@ export default function SettingsPage() {
                 <div className="settings-row-label">Email</div>
                 <div className="settings-row-desc">Your account email (read-only)</div>
               </div>
-              <div style={{ color: 'var(--text-muted)', fontSize: '0.875rem' }}>{user?.email}</div>
+              <div style={{ color: 'var(--text-muted)', fontSize: 'var(--text-sm)' }}>{user?.email}</div>
             </div>
           </div>
         </div>
@@ -212,7 +212,7 @@ export default function SettingsPage() {
         {/* Danger Zone */}
         <div className="card settings-danger">
           <div className="settings-section" style={{ marginBottom: 0 }}>
-            <div className="settings-section-title" style={{ color: 'var(--error-500)' }}>Danger Zone</div>
+            <div className="settings-section-title" style={{ color: 'var(--danger)' }}>Danger Zone</div>
 
             <div className="settings-row" style={{ borderBottom: 'none' }}>
               <div>
@@ -225,7 +225,7 @@ export default function SettingsPage() {
             </div>
 
             {confirmClear && (
-              <div style={{ marginTop: '0.75rem', padding: '1rem', background: 'var(--surface-hover)', borderRadius: 'var(--radius-md)' }}>
+              <div style={{ marginTop: '0.75rem', padding: '1rem', background: 'var(--bg-surface-hover)', borderRadius: 'var(--radius-md)' }}>
                 <p style={{ fontSize: '0.875rem', marginBottom: '0.5rem' }}>
                   Type <strong>DELETE</strong> to confirm. This will permanently remove all your tasks.
                 </p>
@@ -259,7 +259,7 @@ export default function SettingsPage() {
             </div>
 
             {confirmDelete && (
-              <div style={{ marginTop: '0.75rem', padding: '1rem', background: 'var(--surface-hover)', borderRadius: 'var(--radius-md)' }}>
+              <div style={{ marginTop: '0.75rem', padding: '1rem', background: 'var(--bg-surface-hover)', borderRadius: 'var(--radius-md)' }}>
                 <p style={{ fontSize: '0.875rem', marginBottom: '0.5rem' }}>
                   Type <strong>DELETE</strong> to confirm. This will permanently remove your account and all tasks.
                 </p>

@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
+import logoMark from '../assets/brand/logo-mark.svg'
 
 export default function SignUpPage() {
   const { signUp } = useAuth()
@@ -43,11 +44,8 @@ export default function SignUpPage() {
     <div className="auth-page">
       <div className="card auth-card">
         <div className="auth-card-header">
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '0.75rem' }}>
-            <div className="app-header-brand">
-              <div className="brand-logo">M</div>
-              MiraiTasks
-            </div>
+          <div className="auth-logo">
+            <img src={logoMark} alt="MiraiTasks" style={{ width: '48px', height: '48px' }} />
           </div>
           <h1>Create your account</h1>
           <p>Start organizing your tasks today</p>
