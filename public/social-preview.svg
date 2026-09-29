@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" fill="none">
+  <rect width="1280" height="640" fill="#0E0E10"/>
+  <circle cx="640" cy="320" r="330" fill="#D4AF37" opacity="0.035"/>
+  <rect x="520" y="132" width="96" height="96" rx="24" fill="#17171C" stroke="#D4AF37" stroke-width="2"/>
+  <path d="M546 200V160L568 184L590 160V200" stroke="#D4AF37" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M568 184V205" stroke="#C9A96E" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="568" cy="209" r="3" fill="#D4AF37"/>
+  <text x="640" y="310" text-anchor="middle" font-family="Georgia, serif" font-size="64" font-weight="700" fill="#F5F1E8">Mirai<tspan fill="#D4AF37">Tasks</tspan></text>
+  <text x="640" y="374" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#B5B0A5">Plan your future, one task at a time</text>
+  <line x1="560" y1="430" x2="720" y2="430" stroke="#D4AF37" stroke-width="2" opacity="0.7"/>
+</svg>
